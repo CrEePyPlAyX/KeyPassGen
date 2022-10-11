@@ -1,0 +1,61 @@
+import random
+def pas_rd():
+    number = '0123456789'
+    symbol = 'qwertyuiopasdfghjklzxcvbnm'
+    symbolsUp = symbol.upper()
+    symbolsAll = number + symbol + symbolsUp
+    ls = list(symbolsAll)
+    many = int(input("Сколько надо паролей: "))
+    pass_length = range(int(input('Введите длину пароля: ')))
+    x = 0
+    while x < many:
+        password = ''.join(random.choice(ls) for i in pass_length)
+        print(password)
+        x += 1
+def keys():
+    number = '0123456789'
+    symbol = 'qwertyuiopasdfghjklzxcvbnm'.upper()
+    symbolsAll = number + symbol
+    ls = list(symbolsAll)
+    many = int(input("Сколько надо ключей: "))
+    e = 0
+    while e < many:
+        section1 = ''.join(random.choice(ls) for i in range(5))
+        section2 = ''.join(random.choice(ls) for i in range(5))
+        section3 = ''.join(random.choice(ls) for i in range(5))
+        section4 = ''.join(random.choice(ls) for i in range(5))
+        section5 = ''.join(random.choice(ls) for i in range(5))
+        sectionAll = []
+        sectionAll.append(section1)
+        sectionAll.append(section2)
+        sectionAll.append(section3)
+        sectionAll.append(section4)
+        sectionAll.append(section5)
+        key = '-'.join(sectionAll)
+        print(key)
+        e += 1
+
+while True:
+    print('##########################################################################')
+    print("Добро пожаловать в генератор паролей Pro!")
+    print('##########################################################################')
+    print('1 - генератор паролей\n'
+          '2 - генератор ключей Steam\n'
+          '3 - о программе\n'
+          '4 - выход')
+    print('##########################################################################')
+    choice = int(input("Выберите раздел: "))
+    if choice == 1:
+        print('##########################################################################')
+        pas_rd()
+    elif choice == 2:
+            print('##########################################################################')
+            keys()
+    elif choice == 3:
+        print('##########################################################################')
+        print("Это профессиональный генератор паролей, проще говоря, усовершенствованная версия первой ревизии.\n"
+                    "В комплект идёт новаторский генератор ключей Steam.\n"
+                    "Автором является СreepyPlay")
+    elif choice == 4:
+        print("Cпасибо, что воспользовались данной утилитой!")
+        break
