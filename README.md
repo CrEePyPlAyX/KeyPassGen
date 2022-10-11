@@ -9,6 +9,7 @@ In the output you get the desired number of quite complex passwords.
 Just enter the number of keys and the program will output this number. That's all.
 You can also read about the program and exit.
 That's all the functionality.
+
 RUS: Это моя первая программа.
 Она нужна для генерации ключей Steam и паролей.
 Как пользоваться ею?
